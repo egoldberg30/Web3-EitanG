@@ -14,7 +14,7 @@ export function slideInRight(triggerElement,animationElement){
             trigger: triggerElement,
             scrub:true,
             toggleActions: "restart none resume none",
-            markers: true
+            markers:true
         }
     });
 }
@@ -30,7 +30,20 @@ export function slideInLeft(triggerElement,animationElement){
             trigger: triggerElement,
             scrub:true,
             toggleActions: "restart none resume none",
-            markers: true
+            markers:true
+        }
+    });
+}
+
+export function grow(growingElements){
+    const tl = new gsap.timeline();
+    tl.from(animationElement,{
+        duration:1,
+        alpha:0,
+        scrollTrigger:{
+            toggleActions: "play none none none",
+            scrub:true,
+            markers:true
         }
     });
 }
