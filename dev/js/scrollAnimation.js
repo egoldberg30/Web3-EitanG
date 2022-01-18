@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-export function slideInRight(triggerElement,animationElement ){
+export function slideInRight(triggerElement,animationElement){
     const tl = new gsap.timeline();
     tl.from(animationElement,{
         duration:1,
@@ -20,7 +20,7 @@ export function slideInRight(triggerElement,animationElement ){
 }
 
 
-export function slideInLeft(triggerElement,animationElement ){
+export function slideInLeft(triggerElement,animationElement){
     const tl = new gsap.timeline();
     tl.from(animationElement,{
         duration:1,
