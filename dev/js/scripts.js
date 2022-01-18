@@ -13,5 +13,5 @@ window.addEventListener('load', function(){
         
 {slideInLeft(triggerElements[i], animationElements[i]);}
 {slideInRight(triggerElements[i], animationElements[i]);}
-{getbigger(triggerElements[i], animationElements[i]);}
+{getbigger("#history-first", growingElements[i]);}
 });

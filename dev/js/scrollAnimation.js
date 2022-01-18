@@ -40,8 +40,9 @@ export function getbigger(triggerElement,animationElement){
     tl.from(animationElement,{
         duration:1,
         alpha:0,
+        scale:1.5,
         scrollTrigger:{
-            trigger: triggerElement,
+            trigger: "#history-first",
             toggleActions: "play none none none",
             scrub:true,
             markers:true
