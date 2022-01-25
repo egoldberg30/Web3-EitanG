@@ -36,17 +36,17 @@ gsap.registerPlugin(ScrollTrigger);
 // }
 
 
-export function slideInLeft(animationElement,animationElement){
+export function slideInLeft(triggerElement,animationElement){
     const tl = new gsap.timeline();
     tl.from(animationElement,{
         // duration:1,
         alpha:0,
         x: 450,
         scrollTrigger:{
+              // markers:true
             trigger: animationElement,
             scrub:true,
             toggleActions: "restart none resume none"
-            // markers:true
         }
     });
 }
@@ -58,10 +58,10 @@ export function getbigger(triggerElement,animationElement){
         alpha:0,
         scale:0,
         scrollTrigger:{
+              // markers:true
             trigger: "#history-first",
             toggleActions: "play none none none",
             scrub:true
-            // markers:true
         }
     });
 }
