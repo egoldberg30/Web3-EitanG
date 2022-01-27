@@ -1,5 +1,4 @@
 import { gsap } from "gsap";
-gsap.registerPlugin(DrawSVGPlugin);
 
 gsap.set(".burgerlines",{transformOrigin:"center"});
 
@@ -15,8 +14,8 @@ const middlelineTL = new gsap.timeline();
 middlelineTL.to(".burgerlines:nth-child(2)",{duration:0.2, scale:0})
 
 
-export const burgerTL = new gsap.timeline({paused:true});
+export const burgermenuTL = new gsap.timeline({paused:true});
 
-burgerTL.add(toplineTL,"burger")
+burgermenuTL.add(toplineTL,"burger")
     .add(bottomlineTL,"burger")
     .add(middlelineTL,"burger")
