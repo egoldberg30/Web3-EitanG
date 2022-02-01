@@ -454,10 +454,12 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 5000;
+  z-index: 1000;
 }
 header > div {
   display: grid;
-  grid-template-areas: "logo burger" "nav nav";
+  grid-template-areas: "logo burger-container" "nav nav";
   grid-template-columns: 20% auto;
 }
 @media (min-width: 1024px) {
@@ -470,32 +472,40 @@ header > div #logo-container {
   grid-area: logo;
   padding: 10px;
 }
-header > div #burger-container {
+header > div #burger {
   align-items: center;
   justify-content: flex-end;
   display: flex;
-  grid-area: burger;
+  grid-area: burger-container;
   padding: 10px;
+  position: relative;
 }
 @media (min-width: 1024px) {
-  header > div #burger-container {
+  header > div #burger {
     display: none !important;
   }
 }
-header > div #burger-container i {
-  cursor: pointer;
-  font-size: 1.875rem;
+header > div #burger #burger-container {
+  position: absolute;
+  z-index: 1000;
+  height: 40px;
+  width: 40px;
+  border: 1px solid red;
 }
 header > div #nav-container {
   background-color: #222222;
-  display: none;
   grid-area: nav;
-  padding: 20px 10px 10px;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 500;
 }
 @media (min-width: 1024px) {
   header > div #nav-container {
     background-color: #fff;
-    display: block !important;
+    position: static;
+    height: 100%;
+    width: 100%;
   }
 }
 

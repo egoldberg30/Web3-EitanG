@@ -7,11 +7,13 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 5000;
+    z-index: 1000;
 
     >div {
         display: grid;
         grid-template-areas: 
-        "logo burger"
+        "logo burger-container"
         "nav nav";
         grid-template-columns: 20% auto;
 
@@ -25,32 +27,41 @@ header {
             padding: 10px;
         }
 
-        #burger-container {
+        #burger {
             align-items: center;
             justify-content: flex-end;
             display: flex;
-            grid-area: burger;
+            grid-area: burger-container;
             padding: 10px;
+            position: relative;
 
             @include lg {
                 display: none !important;
             }
 
-            i {
-                cursor: pointer;
-                font-size: rem-calc(30);
+            #burger-container{
+                position: absolute;
+                z-index: 1000;
+                height: 40px;
+                width: 40px;
+                border: 1px solid red;
+                // background-color: #fff;
             }
         }
 
         #nav-container {
             background-color: $charcoal;
-            display: none;
             grid-area: nav;
-            padding: 20px 10px 10px;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: 500;
 
             @include lg {
                 background-color: $white;
-                display: block !important;
+                position: static;
+                height: 100%;
+                width: 100%;
             }
         }
     }
