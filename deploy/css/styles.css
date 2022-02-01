@@ -455,7 +455,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 5000;
-  z-index: 1000;
 }
 header > div {
   display: grid;
@@ -490,7 +489,6 @@ header > div #burger #burger-container {
   z-index: 1000;
   height: 40px;
   width: 40px;
-  border: 1px solid red;
 }
 header > div #nav-container {
   background-color: #222222;
