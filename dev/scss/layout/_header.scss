@@ -34,16 +34,6 @@ header {
             padding: 10px;
             position: relative;
 
-            // @include sm{
-            //     // height: 100%;
-            //     margin-top: 45%;
-            // }
-
-            // @include md{
-            //     // height: 100%;
-            //     margin-top: 45%;
-            // }
-
             @include lg {
                 display: none !important;
             }
