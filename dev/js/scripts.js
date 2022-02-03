@@ -3,6 +3,7 @@ import {burgermenuTL} from "./burgeranimation.js"
 import {mobile_menu_animation} from "./mobilemenu.js"
 import {scrolltosection} from "./scrolltosections.js"
 import {displayWindowSize} from "./windowresizing.js"
+import {gsap} from "gsap";
 
 
 window.addEventListener('load', function(){
@@ -17,29 +18,34 @@ window.addEventListener('load', function(){
 
 
 var burgerButton = document.querySelector("#burger-container");
-let canISeeMenu = false;
-
-function open_close_menu(){
-    if(canISeeMenu === false){
-        // CAN'T see the menu -> turn burger into X
-        burgermenuTL.play();
-        mobile_menu_animation.play();
-        canISeeMenu = true;
-    }else{
-        // CAN see the menu -> turn X into burger
-        burgermenuTL.reverse();
-        mobile_menu_animation.reverse();
-        canISeeMenu = false;
-    }
-}
-
-
 burgerButton.addEventListener("click", open_close_menu);
 let navLinks = document.querySelectorAll(".nav-links");
 
 for (const button of navLinks){
     button.addEventListener("click", checkScrolling);
     button.addEventListener("click", open_close_menu);
+}
+
+
+let menu = document.querySelector("#nav-container");
+let menu_width = menu.offsetWidth;
+let canISeeMenu = false;
+
+
+function open_close_menu(){
+    if(canISeeMenu === false){
+        // CAN'T see the menu -> turn burger into X
+        burgermenuTL.play();
+        mobile_menu_animation.play();
+        gsap.set("#nav-container",{x:menu_width});
+        canISeeMenu = true;
+    }else{
+        // CAN see the menu -> turn X into burger
+        burgermenuTL.reverse();
+        mobile_menu_animation.reverse();
+        // gsap.set("#nav-container",{x:0});
+        canISeeMenu = false;
+    }
 }
 
 
@@ -55,5 +61,5 @@ function checkScrolling(e) {
 //check the window size on load
 window.addEventListener('load', displayWindowSize);
 
-//listen to window resizing function
-window.addEventListener("resize", displayWindowSize);
+// //listen to window resizing function
+// window.addEventListener("resize", displayWindowSize);
