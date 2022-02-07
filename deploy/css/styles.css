@@ -102,7 +102,7 @@ abbr[title] {
  */
 b,
 strong {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 /**
@@ -425,12 +425,12 @@ ul a {
 ul li a {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: medium;
   font-size: 1rem;
   color: white;
 }
 ul li a:hover, ul li a:active {
-  color: rgba(255, 253, 235, 0.6);
+  color: #c0c0c0;
 }
 
 /* =============

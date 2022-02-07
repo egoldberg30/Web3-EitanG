@@ -16,13 +16,13 @@ ul{
         a{
             text-align: center;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
+            font-weight: medium;
             font-size: rem-calc(16);
             color: white;
         }
 
         a:hover, a:active{
-            color: rgba(255, 253, 235, 0.6);
+            color: $gray;
         }
     }
 }
