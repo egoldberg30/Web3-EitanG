@@ -1,0 +1,30 @@
+/* =============
+    Header
+============= */
+header{
+    position: fixed;
+    width: 100vw;
+    height: 55px;
+    background-color: $red;
+    z-index: 1000;
+
+    >div{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 100%;
+
+        ul{
+            grid-area: header;
+            justify-content: space-evenly;
+            justify-content: space-around;
+            width: 75vw
+        }
+
+        #logo-cell{
+            width: 90px;
+            padding: 20px 0px;
+        }
+    }
+}

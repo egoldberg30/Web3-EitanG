@@ -1,0 +1,29 @@
+#preloader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+    
+    >div{
+        background-color: $beige2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        SVG{
+            #Hand1, #Hand2, #Hand3, #Hand4, #Hand5, #Hand6, #Hand7, #Hand8, #Hand9, #Hand10, #Hand11{
+                visibility:hidden;
+            }
+        
+            #SkeletonInMotion_1, #SkeletonInMotion_2, #SkeletonInMotion_3, #SkeletonInMotion_4, #SkeletonInMotion_5, #SkeletonInMotion_6, #SkeletonInMotion_7, #SkeletonInMotion_8, #SkeletonInMotion_9, #SkeletonInMotion_10, #SkeletonInMotion_11, #SkeletonInMotion_12, #SkeletonInMotion_13, #SkeletonInMotion_14, #SkeletonInMotion_15, #SkeletonInMotion_16, #SkeletonInMotion_17, #SkeletonInMotion_18, #SkeletonInMotion_19, #SkeletonInMotion_20{
+                visibility:hidden;
+            }
+
+            #LightsOff, #preloader_screenfill{
+                visibility:hidden;
+            }
+        }
+    }
+} 

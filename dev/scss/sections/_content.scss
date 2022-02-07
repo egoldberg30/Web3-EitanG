@@ -1,0 +1,26 @@
+body{
+    Color: $brown;
+    background-color: $beige;
+
+    h2{
+        font-weight: 500;
+        font-size: rem-calc(28);
+        padding: 0px 15vw;
+    }
+
+    h3{
+        font-weight: 300;
+        font-size: rem-calc(18);
+        line-height: 28px;
+        padding: 5px 20vw;
+        padding-bottom: 50px;
+
+        a{
+            Color: $brown;
+        }
+
+        a:hover, a:active{
+            color: rgba(121, 0, 2, 0.5);
+        }
+    }
+}
