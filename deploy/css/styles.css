@@ -369,15 +369,24 @@ ul li {
     Typography
 ============= */
 body {
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 body h1, body h2, body h3, body h4 {
   margin: 0;
   padding: 0;
 }
-body p {
+body h1 {
   margin: 0;
-  padding: 0;
+  padding: 5;
+  font-size: 2rem;
+  color: white;
+}
+body h2 {
+  margin: 0;
+  padding: 5;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: light;
 }
 
 /* =============
@@ -415,10 +424,10 @@ ul a {
 }
 ul li a {
   text-align: center;
-  font-family: Jost;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  color: #FFFDEB;
+  color: white;
 }
 ul li a:hover, ul li a:active {
   color: rgba(255, 253, 235, 0.6);
@@ -430,8 +439,8 @@ ul li a:hover, ul li a:active {
 header {
   position: fixed;
   width: 100vw;
-  height: 55px;
-  background-color: #790002;
+  height: 50px;
+  background-color: black;
   z-index: 1000;
 }
 header > div {
@@ -447,11 +456,34 @@ header > div ul {
   justify-content: space-around;
   width: 75vw;
 }
-header > div #logo-cell {
-  width: 90px;
-  padding: 20px 0px;
-}
 
 /* =============
     Footer
 ============= */
+.colors {
+  width: 100vw;
+  height: 100vh;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#graysection {
+  background-color: #c0c0c0;
+}
+
+#redsection {
+  background-color: #FF5B5B;
+}
+
+#bluesection {
+  background-color: #00ACE5;
+}
+
+#violetsection {
+  background-color: #5C2D91;
+}
+
+#yellowsection {
+  background-color: #FFD200;
+}

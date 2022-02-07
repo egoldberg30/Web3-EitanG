@@ -4,8 +4,8 @@
 header{
     position: fixed;
     width: 100vw;
-    height: 55px;
-    background-color: $red;
+    height: 50px;
+    background-color: black;
     z-index: 1000;
 
     >div{
@@ -20,11 +20,6 @@ header{
             justify-content: space-evenly;
             justify-content: space-around;
             width: 75vw
-        }
-
-        #logo-cell{
-            width: 90px;
-            padding: 20px 0px;
         }
     }
 }

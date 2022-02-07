@@ -1,0 +1,32 @@
+.colors{
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#graysection{
+    background-color:$gray;
+}
+
+#redsection{
+    background-color:$red;
+}
+
+#bluesection{
+    background-color:$blue;
+
+    // #testing{
+    //     align-content: center;
+    //     justify-content: center;
+    // }
+}
+
+#violetsection{
+    background-color: $violet;
+}
+
+#yellowsection{
+    background-color: $yellow;
+}
