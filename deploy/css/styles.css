@@ -424,7 +424,7 @@ ul li a {
   font-family: "Montserrat", sans-serif;
   font-weight: medium;
   font-size: 1rem;
-  color: white;
+  color: black;
 }
 ul li a:hover, ul li a:active {
   color: #c0c0c0;
@@ -434,24 +434,57 @@ ul li a:hover, ul li a:active {
     Header
 ============= */
 header {
+  background-color: white;
   position: fixed;
   width: 100vw;
   height: 50px;
-  background-color: black;
   z-index: 1000;
+  display: grid;
+  grid-template-areas: ". headercontents .";
+  grid-template-columns: auto 95% auto;
 }
-header > div {
-  display: flex;
-  flex-wrap: nowrap;
+header #header-contents {
+  grid-area: headercontents;
+  display: grid;
+  grid-template-areas: "logo . burger";
+  grid-template-columns: 15% auto 15%;
+}
+header #header-contents #logo-container {
+  grid-area: logo;
+}
+header #header-contents #burger-container {
+  grid-area: burger;
+}
+@media (min-width: 1024px) {
+  header #header-contents #burger-container {
+    display: none !important;
+  }
+}
+header #header-contents #burger-container #hamburger_icon {
+  z-index: 1500;
+  height: 40px;
+  width: 40px;
+}
+@media (min-width: 1024px) {
+  header #header-contents #burger-container #hamburger_icon {
+    display: none !important;
+  }
+}
+header #header-contents #nav-container {
+  grid-area: nav;
   justify-content: space-evenly;
   height: 100%;
   width: 100%;
 }
-header > div ul {
-  grid-area: header;
+header #header-contents #nav-container ul {
   justify-content: space-evenly;
   justify-content: space-around;
-  width: 75vw;
+}
+@media (min-width: 1024px) {
+  header #header-contents {
+    grid-template-areas: "logo nav";
+    grid-template-columns: 15% auto;
+  }
 }
 
 /* =============

@@ -2,152 +2,162 @@
     Header
 ============= */
 header{
+    background-color: white;
     position: fixed;
     width: 100vw;
     height: 50px;
-    background-color: black;
     z-index: 1000;
-
-
-
-    
-
     display: grid;
-    grid-template-areas:
-    "logo burger"
-    grid-template-columns: 20% auto;
+    grid-template-areas: ". headercontents .";
+    grid-template-columns: auto 95% auto;
 
-    @include lg {
-        grid-template-areas: "logo nav";
-        grid-template-columns: 20% auto;
-    }
+    #header-contents{
+        grid-area: headercontents;
+        display: grid;
+        grid-template-areas: "logo . burger";
+        grid-template-columns: 15% auto 15%;
+        // border: 1px red;
 
-    #logo-container {
-        grid-area: logo;
-        padding: 10px;
-    }
-
-    #burger {
-        align-items: center;
-        justify-content: flex-end;
-        display: flex;
-        // grid-area: burger;
-        padding: 10px;
-        position: relative;
-
-        @include lg {
-            display: none !important;
+        #logo-container {
+            grid-area: logo;
+            // padding: 10px;
+            // border: 1px red;
         }
 
-        #burger-container{
-            position: absolute;
-            z-index: 1500;
-            height: 40px;
-            width: 40px;
+        #burger-container {
+            grid-area: burger;
+            // align-items: center;
+            // justify-content: flex-end;
+            // display: flex;
+            // padding: 10px;
+            // position: relative;
+    
+            @include lg {
+                display: none !important;
+            }
+    
+            #hamburger_icon{
+                // position: absolute;
+                z-index: 1500;
+                height: 40px;
+                width: 40px;
+    
+                @include lg {
+                    display: none !important;
+                }
+            }
         }
-    }
 
+        #nav-container {
 
-    #nav-container {
-        grid-area: nav;
-        position: fixed;
-        // width: 100vw;
-        // height: 100vh;
-        // z-index: 500;
+            // display: none !important;
 
-        @include lg {
-            // background-color: $white;
-            position: static;
-            height: 100%;
-            width: 100%;
-        }
-    }
-
-
-
-
-
-
-
-
-    #nav-container{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        height: 100%;
-        width: 100%;
-
-        ul{
-            // grid-area: header;
+            grid-area: nav;
             justify-content: space-evenly;
-            justify-content: space-around;
-            width: 75vw
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
->div {
-    // display: grid;
-    // grid-template-areas: 
-    // "logo burger"
-    // "nav nav";
-    grid-template-columns: 20% auto;
-
-    @include lg {
-        // grid-template-areas: "logo nav";
-        grid-template-columns: 20% auto;
-    }
-
-    #logo-container {
-        // grid-area: logo;
-        padding: 10px;
-    }
-
-    #burger {
-        align-items: center;
-        justify-content: flex-end;
-        display: flex;
-        // grid-area: burger;
-        padding: 10px;
-        position: relative;
-
-        @include lg {
-            display: none !important;
-        }
-
-        #burger-container{
-            position: absolute;
-            z-index: 1500;
-            height: 40px;
-            width: 40px;
-        }
-    }
-
-    #nav-container {
-        background-color: $yellow;
-        // grid-area: nav;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        z-index: 500;
-
-        @include lg {
-            background-color: $white;
-            position: static;
             height: 100%;
             width: 100%;
+            // position: fixed;
+            // width: 100vw;
+            // height: 100vh;
+            // z-index: 500;
+    
+            // @include lg {
+            //     position: static;
+            //     height: 100%;
+            //     width: 100%;
+            // }
+    
+            ul{
+                justify-content: space-evenly;
+                justify-content: space-around;
+            }
+        }
+
+        @include lg {
+            grid-template-areas: "logo nav";
+            grid-template-columns: 15% auto;
         }
     }
+
+    // #nav-container{
+    //     display: flex;
+    //     flex-wrap: nowrap;
+    //     justify-content: space-evenly;
+    //     height: 100%;
+    //     width: 100%;
+
+    //     ul{
+    //         // grid-area: header;
+    //         justify-content: space-evenly;
+    //         justify-content: space-around;
+    //         width: 75vw;
+    //     }
+    // }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// >div {
+//     // display: grid;
+//     // grid-template-areas: 
+//     // "logo burger"
+//     // "nav nav";
+//     grid-template-columns: 20% auto;
+
+//     @include lg {
+//         // grid-template-areas: "logo nav";
+//         grid-template-columns: 20% auto;
+//     }
+
+//     #logo-container {
+//         // grid-area: logo;
+//         padding: 10px;
+//     }
+
+//     #burger {
+//         align-items: center;
+//         justify-content: flex-end;
+//         display: flex;
+//         // grid-area: burger;
+//         padding: 10px;
+//         position: relative;
+
+//         @include lg {
+//             display: none !important;
+//         }
+
+//         #burger-container{
+//             position: absolute;
+//             z-index: 1500;
+//             height: 40px;
+//             width: 40px;
+//         }
+//     }
+
+//     #nav-container {
+//         background-color: $yellow;
+//         // grid-area: nav;
+//         position: fixed;
+//         width: 100vw;
+//         height: 100vh;
+//         z-index: 500;
+
+//         @include lg {
+//             // background-color: white;
+//             position: static;
+//             height: 100%;
+//             width: 100%;
+//         }
+//     }
+// }
