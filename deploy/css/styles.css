@@ -463,6 +463,10 @@ header > div ul {
   text-align: center;
 }
 
+.textcontainers {
+  padding-top: 50%;
+}
+
 #graysection {
   background-color: #c0c0c0;
 }
@@ -473,10 +477,6 @@ header > div ul {
 
 #bluesection {
   background-color: #00ACE5;
-}
-#bluesection #testing {
-  align-items: center;
-  justify-content: center;
 }
 
 #violetsection {

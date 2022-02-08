@@ -1,9 +1,22 @@
 .colors{
     width: 100vw;
     height: 100vh;
-    // align-content: center;
-    // justify-content: center;
     text-align: center;
+    // align-items: center;
+    // justify-content: center;
+}
+
+.textcontainers{
+    padding-top: 50%;
+    // align-items: center;
+    // justify-content: center;
+    // vertical-align: center;
+
+    // align-self: center;
+
+    // display: block;
+    // margin-left: auto;
+    // margin-right: auto;
 }
 
 #graysection{
@@ -16,17 +29,6 @@
 
 #bluesection{
     background-color:$blue;
-
-    #testing{
-        // position: relative;
-        // display: flex;
-        align-items: center;
-        justify-content: center;
-
-        // position:absolute;
-        // left:50%;
-        // top:50%;
-    }
 }
 
 #violetsection{
