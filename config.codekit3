@@ -335,6 +335,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/README.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/README.html",
+      "oF" : 0
+    },
     "\/README.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -367,7 +375,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-pink",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 664988549.31718504
+    "lastBuiltDate" : 666157183.45793605
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
