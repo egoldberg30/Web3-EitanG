@@ -472,26 +472,26 @@ header #header-contents {
   grid-area: headercontents;
   display: grid;
   grid-template-areas: "logo burger";
-  grid-template-columns: 160px auto;
+  grid-template-columns: 165px auto;
 }
 @media (min-width: 1024px) {
   header #header-contents {
     display: grid;
     grid-template-areas: "logo nav";
-    grid-template-columns: 160px auto;
+    grid-template-columns: 165px auto;
   }
 }
 @media (min-width: 1200px) {
   header #header-contents {
     display: grid;
     grid-template-areas: "logo nav";
-    grid-template-columns: 160px auto;
+    grid-template-columns: 165px auto;
   }
 }
 header #header-contents #logo-container {
   grid-area: logo;
   padding-left: 20px;
-  padding-top: 0px;
+  padding-top: 2px;
   padding-right: 10px;
 }
 header #header-contents #burger-container {
@@ -514,11 +514,16 @@ header #header-contents #burger-container #hamburger_icon {
   padding-right: 20px;
 }
 header #header-contents #nav-container {
-  width: 30vw;
+  width: 40vw;
   height: 100vh;
   background-color: white;
   position: absolute;
   right: 0;
+}
+@media (min-width: 768px) {
+  header #header-contents #nav-container {
+    width: 30vw;
+  }
 }
 @media (min-width: 1024px) {
   header #header-contents #nav-container {

@@ -16,24 +16,24 @@ header{
         grid-area: headercontents;
         display: grid;
         grid-template-areas: "logo burger";
-        grid-template-columns: 160px auto;
+        grid-template-columns: 165px auto;
 
         @include lg {
             display: grid;
             grid-template-areas: "logo nav";
-            grid-template-columns: 160px auto;
+            grid-template-columns: 165px auto;
         }
 
         @include xl {
             display: grid;
             grid-template-areas: "logo nav";
-            grid-template-columns: 160px auto;
+            grid-template-columns: 165px auto;
         }
 
         #logo-container {
             grid-area: logo;
             padding-left: 20px;
-            padding-top: 0px;
+            padding-top: 2px;
             padding-right: 10px;
 
             // a{
@@ -67,11 +67,15 @@ header{
 
         #nav-container {
             // display: none !important;
-            width: 30vw;
+            width: 40vw;
             height: 100vh;
             background-color: white;
             position: absolute;
             right: 0;
+
+            @include md{
+                width: 30vw;
+            }
 
             @include lg{
                 grid-area: nav;
