@@ -3,76 +3,70 @@
 ============= */
 header{
     background-color: white;
-    position: fixed;
+    box-shadow: 0px 3px 20px rgba(0,0,0,0.13);
     width: 100vw;
     height: 50px;
     z-index: 1000;
+    position: fixed;
     display: grid;
     grid-template-areas: ". headercontents .";
-    grid-template-columns: auto 95% auto;
+    grid-template-columns: auto 99% auto;
 
     #header-contents{
         grid-area: headercontents;
         display: grid;
         grid-template-areas: "logo burger";
-        grid-template-columns: 15% auto;
-        // grid-template-areas: "logo . burger";
-        // grid-template-columns: 15% auto 15%;
-        // border: 1px red;
+        grid-template-columns: 165px auto;
 
         @include lg {
+            display: grid;
             grid-template-areas: "logo nav";
-            grid-template-columns: 15% auto;
+            grid-template-columns: 165px auto;
+        }
+
+        @include xl {
+            display: grid;
+            grid-template-areas: "logo nav";
+            grid-template-columns: 165px auto;
         }
 
         #logo-container {
             grid-area: logo;
-           
-            // padding: 10px;
-            // border: 1px red;
+            padding-left: 20px;
+            padding-top: 2px;
+            padding-right: 10px;
+            border: 1px red;
 
             a{
                 display: inline-block;
 
                 img{
                     width: 100%;
-    
-                    @include xl{
-                        width: 80%;
-                    }
                 }
             }
         }
 
         #burger-container {
             grid-area: burger;
-            // align-items: center;
             justify-content: flex-end;
             align-items: center;
             display: flex;
             width: 100%;
             height: 100%;
-
-            // padding: 10px;
-            // position: relative;
     
             @include lg {
                 display: none !important;
             }
     
             #hamburger_icon{
-                // position: absolute;
-                // z-index: 1500;
                 height: 40px;
                 width: 40px;
+                padding-right: 20px;
             }
         }
 
         #nav-container {
-
             display: none !important;
-           
-            // justify-content: space-evenly;
             height: 100%;
             width: 100%;
 
@@ -80,23 +74,22 @@ header{
                 grid-area: nav;
                 display: block !important;
             }
-            // position: fixed;
-            // width: 100vw;
-            // height: 100vh;
-            // z-index: 500;
-    
-            // @include lg {
-            //     position: static;
-            //     height: 100%;
-            //     width: 100%;
-            // }
-    
+
+            @include xl{
+                grid-area: nav;
+                display: block !important;
+            }
+
             ul{
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
                 height: 100%;
-                // justify-content: space-around;
+                padding-left: 15vw;
+
+                @include xl{
+                    padding-left: 25vw;
+                }
             }
         }
     }

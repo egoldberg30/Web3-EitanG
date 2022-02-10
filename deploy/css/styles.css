@@ -435,39 +435,47 @@ textarea {
 ============= */
 header {
   background-color: white;
-  position: fixed;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.13);
   width: 100vw;
   height: 50px;
   z-index: 1000;
+  position: fixed;
   display: grid;
   grid-template-areas: ". headercontents .";
-  grid-template-columns: auto 95% auto;
+  grid-template-columns: auto 99% auto;
 }
 header #header-contents {
   grid-area: headercontents;
   display: grid;
   grid-template-areas: "logo burger";
-  grid-template-columns: 15% auto;
+  grid-template-columns: 165px auto;
 }
 @media (min-width: 1024px) {
   header #header-contents {
+    display: grid;
     grid-template-areas: "logo nav";
-    grid-template-columns: 15% auto;
+    grid-template-columns: 165px auto;
+  }
+}
+@media (min-width: 1200px) {
+  header #header-contents {
+    display: grid;
+    grid-template-areas: "logo nav";
+    grid-template-columns: 165px auto;
   }
 }
 header #header-contents #logo-container {
   grid-area: logo;
+  padding-left: 20px;
+  padding-top: 2px;
+  padding-right: 10px;
+  border: 1px red;
 }
 header #header-contents #logo-container a {
   display: inline-block;
 }
 header #header-contents #logo-container a img {
   width: 100%;
-}
-@media (min-width: 1200px) {
-  header #header-contents #logo-container a img {
-    width: 80%;
-  }
 }
 header #header-contents #burger-container {
   grid-area: burger;
@@ -485,6 +493,7 @@ header #header-contents #burger-container {
 header #header-contents #burger-container #hamburger_icon {
   height: 40px;
   width: 40px;
+  padding-right: 20px;
 }
 header #header-contents #nav-container {
   display: none !important;
@@ -497,11 +506,23 @@ header #header-contents #nav-container {
     display: block !important;
   }
 }
+@media (min-width: 1200px) {
+  header #header-contents #nav-container {
+    grid-area: nav;
+    display: block !important;
+  }
+}
 header #header-contents #nav-container ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
+  padding-left: 15vw;
+}
+@media (min-width: 1200px) {
+  header #header-contents #nav-container ul {
+    padding-left: 25vw;
+  }
 }
 
 /* =============
