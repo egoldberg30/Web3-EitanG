@@ -410,24 +410,30 @@ textarea {
 /* =============
     Navigation
 ============= */
-#nav-container ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  list-style: none;
-}
-#nav-container ul a {
+#nav-container a {
   text-decoration: none;
 }
-#nav-container ul li a {
+#nav-container li a {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: medium;
   font-size: 1rem;
   color: black;
 }
-#nav-container ul li a:hover, #nav-container ul li a:active {
+#nav-container li #graylink:hover, #nav-container li #graylink:active {
   color: #c0c0c0;
+}
+#nav-container li #redlink:hover, #nav-container li #redlink:active {
+  color: #FF5B5B;
+}
+#nav-container li #bluelink:hover, #nav-container li #bluelink:active {
+  color: #00ACE5;
+}
+#nav-container li #violetlink:hover, #nav-container li #violetlink:active {
+  color: #5C2D91;
+}
+#nav-container li #yellowlink:hover, #nav-container li #yellowlink:active {
+  color: #FFD200;
 }
 
 /* =============
@@ -469,13 +475,6 @@ header #header-contents #logo-container {
   padding-left: 20px;
   padding-top: 2px;
   padding-right: 10px;
-  border: 1px red;
-}
-header #header-contents #logo-container a {
-  display: inline-block;
-}
-header #header-contents #logo-container a img {
-  width: 100%;
 }
 header #header-contents #burger-container {
   grid-area: burger;

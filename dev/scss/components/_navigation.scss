@@ -2,28 +2,38 @@
     Navigation
 ============= */
 #nav-container{
-    ul{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        list-style: none;
     
+    a{
+        text-decoration: none;
+    }
+
+    li{
         a{
-            text-decoration: none;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: medium;
+            font-size: rem-calc(16);
+            color: black;
         }
-    
-        li{
-            a{
-                text-align: center;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: medium;
-                font-size: rem-calc(16);
-                color: black;
-            }
-    
-            a:hover, a:active{
-                color: $gray;
-            }
+
+        #graylink:hover, #graylink:active{
+            color: $gray;
+        }
+
+        #redlink:hover, #redlink:active{
+            color: $red;
+        }
+
+        #bluelink:hover, #bluelink:active{
+            color: $blue;
+        }
+
+        #violetlink:hover, #violetlink:active{
+            color: $violet;
+        }
+
+        #yellowlink:hover, #yellowlink:active{
+            color: $yellow;
         }
     }
 }
