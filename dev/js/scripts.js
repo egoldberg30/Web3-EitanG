@@ -19,6 +19,14 @@ function openCloseMenu(){
     }
 }
 
+function burgerClose(){
+    if(document.documentElement.clientWidth > 1024){
+        burgerTL.reverse();
+        menuAnimation.reverse();
+        canISeeMenu = false;
+    }
+}
+
 burgerButton.addEventListener("click", openCloseMenu);
 
 
@@ -42,6 +50,8 @@ function displayNav(){
 
 window.addEventListener("resize", displayNav);
 window.addEventListener("load", displayNav);
+// window.addEventListener("load", displayNav);
+window.addEventListener("resize", burgerClose);
 
 
 
