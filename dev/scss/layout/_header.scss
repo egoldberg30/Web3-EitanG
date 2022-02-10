@@ -33,6 +33,7 @@ header{
 
             a{
                 display: inline-block;
+
                 img{
                     width: 100%;
     
@@ -41,10 +42,6 @@ header{
                     }
                 }
             }
-
-            
-
-            
         }
 
         #burger-container {
@@ -68,17 +65,12 @@ header{
                 // z-index: 1500;
                 height: 40px;
                 width: 40px;
-    
-                // @include lg {
-                //     display: none !important;
-                // }
             }
         }
 
         #nav-container {
 
             display: none !important;
-
            
             // justify-content: space-evenly;
             height: 100%;
@@ -107,23 +99,5 @@ header{
                 // justify-content: space-around;
             }
         }
-
-        
     }
-
-    // #nav-container{
-    //     display: flex;
-    //     flex-wrap: nowrap;
-    //     justify-content: space-evenly;
-    //     height: 100%;
-    //     width: 100%;
-
-    //     ul{
-    //         // grid-area: header;
-    //         justify-content: space-evenly;
-    //         justify-content: space-around;
-    //         width: 75vw;
-    //     }
-    // }
-
 }
