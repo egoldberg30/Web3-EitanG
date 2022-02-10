@@ -1,4 +1,5 @@
 import {burgerTL} from "./burgerAnimation";
+import {menuAnimation} from "./mobileMenu";
 
 var burgerButton = document.querySelector("#hamburger_icon");
 let canISeeMenu = false;
@@ -6,11 +7,11 @@ let canISeeMenu = false;
 function openCloseMenu(){
     if(canISeeMenu === false){
         burgerTL.play();
-        // menuAnimation.play();
+        menuAnimation.play();
         canISeeMenu = true;
     }else{
         burgerTL.reverse();
-        // menuAnimation.reverse();
+        menuAnimation.reverse();
         canISeeMenu = false;
     }
 }

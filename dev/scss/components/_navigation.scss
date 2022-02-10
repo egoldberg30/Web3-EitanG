@@ -2,114 +2,44 @@
     Navigation
 ============= */
 #nav-container{
-    width: 30vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // background-color: white;
 
-    @include lg{
-        width: 100%;
-    }
-    
-    ul{
+   li{
+        margin-bottom: 20px;
+        line-height: 2rem;
+
+        #graylink:hover,
+        #graylink:active
+        {   color: $gray;}
+
+        #redlink:hover,
+        #redlink:active
+        {   color: $red;}
+
+        #bluelink:hover,
+        #bluelink:active
+        {   color: $blue;}
+
+        #violetlink:hover,
+        #violetlink:active
+        {   color: $violet;}
+
+        #yellowlink:hover,
+        #yellowlink:active
+        {   color: $yellow;}
+
         @include lg {
-            height: 100%;
-            display: flex;
-            justify-content: flex-end;
+            align-items: center;
+            display: flex; 
+            margin-bottom: 0px;
+            line-height: 1rem;
         }
-        
-        li{
-            margin-bottom: 20px;
 
-            @include lg {
-                align-items: center;
-                display: flex; 
-                margin-bottom: 0px;
-
-            }
-
-            a{
-                text-align: center;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: medium;
-                font-size: rem-calc(16);
-                color: black;
-            }
-
-            #graylink:hover,
-            #graylink:active
-            {   color: $gray;}
-
-            #redlink:hover,
-            #redlink:active
-            {   color: $red;}
-
-            #bluelink:hover,
-            #bluelink:active
-            {   color: $blue;}
-
-            #violetlink:hover,
-            #violetlink:active
-            {   color: $violet;}
-
-            #yellowlink:hover,
-            #yellowlink:active
-            {   color: $yellow;}
+        a{
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: medium;
+            font-size: rem-calc(16);
+            color: black;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-// #nav-container {
-//     width: 30%;
-//     height: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-
-//     ul {
-       
-
-//         @include lg {
-//             height: 100%;
-//             display: flex;
-//             justify-content: flex-end;
-//         }
-
-//         li {
-//             margin-bottom: 20px;
-//             text-align: right;
-
-//             @include lg {
-//                 align-items: center;
-//                 display: flex; 
-//             }
-
-//             button {
-//                 background-color: transparent;
-//                  color: white;
-//                  font-family: 'Comfortaa', cursive;
-//                  font-size: rem-calc(30);
-//                  text-decoration: none;
-//                  transition: 0.25s;
-//                  cursor: pointer;
-//                  color: white;
-//                  border: none;
- 
-//                  @include lg {
-//                      color: $black;
-//                      font-size: rem-calc(20);
-//                  }
-//              }
-//         }
-//     }
-// }

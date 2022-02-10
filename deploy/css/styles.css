@@ -414,61 +414,44 @@ textarea {
 /* =============
     Navigation
 ============= */
-#nav-container {
-  width: 30vw;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (min-width: 1024px) {
-  #nav-container {
-    width: 100%;
-  }
-}
-@media (min-width: 1024px) {
-  #nav-container ul {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-#nav-container ul li {
+#nav-container li {
   margin-bottom: 20px;
+  line-height: 2rem;
+}
+#nav-container li #graylink:hover,
+#nav-container li #graylink:active {
+  color: #c0c0c0;
+}
+#nav-container li #redlink:hover,
+#nav-container li #redlink:active {
+  color: #FF5B5B;
+}
+#nav-container li #bluelink:hover,
+#nav-container li #bluelink:active {
+  color: #00ACE5;
+}
+#nav-container li #violetlink:hover,
+#nav-container li #violetlink:active {
+  color: #5C2D91;
+}
+#nav-container li #yellowlink:hover,
+#nav-container li #yellowlink:active {
+  color: #FFD200;
 }
 @media (min-width: 1024px) {
-  #nav-container ul li {
+  #nav-container li {
     align-items: center;
     display: flex;
     margin-bottom: 0px;
+    line-height: 1rem;
   }
 }
-#nav-container ul li a {
+#nav-container li a {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: medium;
   font-size: 1rem;
   color: black;
-}
-#nav-container ul li #graylink:hover,
-#nav-container ul li #graylink:active {
-  color: #c0c0c0;
-}
-#nav-container ul li #redlink:hover,
-#nav-container ul li #redlink:active {
-  color: #FF5B5B;
-}
-#nav-container ul li #bluelink:hover,
-#nav-container ul li #bluelink:active {
-  color: #00ACE5;
-}
-#nav-container ul li #violetlink:hover,
-#nav-container ul li #violetlink:active {
-  color: #5C2D91;
-}
-#nav-container ul li #yellowlink:hover,
-#nav-container ul li #yellowlink:active {
-  color: #FFD200;
 }
 
 /* =============
@@ -479,36 +462,36 @@ header {
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.13);
   width: 100vw;
   height: 50px;
-  z-index: 1000;
+  z-index: 500;
   position: fixed;
   display: grid;
   grid-template-areas: ". headercontents .";
-  grid-template-columns: auto 99% auto;
+  grid-template-columns: auto 100% auto;
 }
 header #header-contents {
   grid-area: headercontents;
   display: grid;
   grid-template-areas: "logo burger";
-  grid-template-columns: 165px auto;
+  grid-template-columns: 160px auto;
 }
 @media (min-width: 1024px) {
   header #header-contents {
     display: grid;
     grid-template-areas: "logo nav";
-    grid-template-columns: 165px auto;
+    grid-template-columns: 160px auto;
   }
 }
 @media (min-width: 1200px) {
   header #header-contents {
     display: grid;
     grid-template-areas: "logo nav";
-    grid-template-columns: 165px auto;
+    grid-template-columns: 160px auto;
   }
 }
 header #header-contents #logo-container {
   grid-area: logo;
   padding-left: 20px;
-  padding-top: 2px;
+  padding-top: 0px;
   padding-right: 10px;
 }
 header #header-contents #burger-container {
@@ -518,6 +501,7 @@ header #header-contents #burger-container {
   display: flex;
   width: 100%;
   height: 100%;
+  z-index: 1500;
 }
 @media (min-width: 1024px) {
   header #header-contents #burger-container {
@@ -530,32 +514,36 @@ header #header-contents #burger-container #hamburger_icon {
   padding-right: 20px;
 }
 header #header-contents #nav-container {
-  display: none !important;
-  height: 100%;
-  width: 100%;
+  width: 30vw;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  right: 0;
 }
 @media (min-width: 1024px) {
   header #header-contents #nav-container {
     grid-area: nav;
     display: block !important;
-  }
-}
-@media (min-width: 1200px) {
-  header #header-contents #nav-container {
-    grid-area: nav;
-    display: block !important;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
   }
 }
 header #header-contents #nav-container ul {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100%;
-  padding-left: 15vw;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   header #header-contents #nav-container ul {
-    padding-left: 25vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 5vw;
+    padding-right: 20px;
   }
 }
 
