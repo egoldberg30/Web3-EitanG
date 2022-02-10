@@ -519,6 +519,7 @@ header #header-contents #nav-container {
   background-color: white;
   position: absolute;
   right: 0;
+  opacity: 0;
 }
 @media (min-width: 768px) {
   header #header-contents #nav-container {
@@ -532,6 +533,7 @@ header #header-contents #nav-container {
     height: 100%;
     width: 100%;
     background-color: transparent;
+    opacity: 1;
   }
 }
 header #header-contents #nav-container ul {
