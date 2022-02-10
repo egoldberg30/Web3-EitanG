@@ -39,8 +39,8 @@ burgerButton.addEventListener("click", openCloseMenu);
 let navButtons = document.querySelectorAll(".nav-links");
 
 for (const button of navButtons){
-    // button.addEventListener("click", checkScrolling);
     button.addEventListener("click", openCloseMenu);
+    // button.addEventListener("click", checkScrolling);
     // button.addEventListener("click", textHighlight);
 }
 

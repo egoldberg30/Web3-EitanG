@@ -29,7 +29,7 @@ export function NavMouseEvents(){
         link.addEventListener("mouseenter", e => {
             e.preventDefault();
             if(i != currentLink){
-                gsap.to(textArray[i], {duration: 0.25, scrambleText: navlinkText[i], ease: "none"});
+                gsap.to(textArray[i], {duration: 0.2, scrambleText: navlinkText[i], ease: "none"});
             }
         });
     });
