@@ -365,6 +365,10 @@ ul li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* =============
     Typography
 ============= */
@@ -410,29 +414,60 @@ textarea {
 /* =============
     Navigation
 ============= */
-#nav-container a {
-  text-decoration: none;
+#nav-container {
+  width: 30vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#nav-container li a {
+@media (min-width: 1024px) {
+  #nav-container {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  #nav-container ul {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+#nav-container ul li {
+  margin-bottom: 20px;
+}
+@media (min-width: 1024px) {
+  #nav-container ul li {
+    align-items: center;
+    display: flex;
+    margin-bottom: 0px;
+  }
+}
+#nav-container ul li a {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: medium;
   font-size: 1rem;
   color: black;
 }
-#nav-container li #graylink:hover, #nav-container li #graylink:active {
+#nav-container ul li #graylink:hover,
+#nav-container ul li #graylink:active {
   color: #c0c0c0;
 }
-#nav-container li #redlink:hover, #nav-container li #redlink:active {
+#nav-container ul li #redlink:hover,
+#nav-container ul li #redlink:active {
   color: #FF5B5B;
 }
-#nav-container li #bluelink:hover, #nav-container li #bluelink:active {
+#nav-container ul li #bluelink:hover,
+#nav-container ul li #bluelink:active {
   color: #00ACE5;
 }
-#nav-container li #violetlink:hover, #nav-container li #violetlink:active {
+#nav-container ul li #violetlink:hover,
+#nav-container ul li #violetlink:active {
   color: #5C2D91;
 }
-#nav-container li #yellowlink:hover, #nav-container li #yellowlink:active {
+#nav-container ul li #yellowlink:hover,
+#nav-container ul li #yellowlink:active {
   color: #FFD200;
 }
 
