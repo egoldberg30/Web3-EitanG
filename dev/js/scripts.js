@@ -1,12 +1,12 @@
 import { gsap } from "gsap";
 import {burgerTL} from "./burgerAnimation";
 import {menuAnimation} from "./mobileMenu";
+import {NavMouseEvents} from "./navHover";
 // import {grayHoverTL} from "./navHover";
 // import {redHoverTL} from "./navHover";
 // import {blueHoverTL} from "./navHover";
 // import {violetHoverTL} from "./navHover";
 // import {yellowHoverTL} from "./navHover";
-import {NavMouseEvents} from "./navHover";
 // import {displayWindowSize} from "./mobileResizing.js"
 // import {scrollPage} from "./pageScroll"
 
