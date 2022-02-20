@@ -33,24 +33,18 @@ let canISeeMenu = false;
 
 
 function open_close_menu(){
-    if(menu_width <= 1024){
-    
-        function open_close_menu2(){
-        if(canISeeMenu === false){
-            // CAN'T see the menu -> turn burger into X
-            burgermenuTL.play();
-            mobile_menu_animation.play();
-            gsap.set("#nav-container",{x:menu_width});
-            canISeeMenu = true;
-        }else{
-            // CAN see the menu -> turn X into burger
-            burgermenuTL.reverse();
-            mobile_menu_animation.reverse();
-            // gsap.set("#nav-container",{x:0});
-            canISeeMenu = false;
-        }
-        
-        }
+    if(canISeeMenu === false){
+        // CAN'T see the menu -> turn burger into X
+        burgermenuTL.play();
+        mobile_menu_animation.play();
+        gsap.set("#nav-container",{x:menu_width});
+        canISeeMenu = true;
+    }else{
+        // CAN see the menu -> turn X into burger
+        burgermenuTL.reverse();
+        mobile_menu_animation.reverse();
+        // gsap.set("#nav-container",{x:0});
+        canISeeMenu = false;
     }
 }  
 
@@ -68,4 +62,4 @@ function checkScrolling(e) {
 window.addEventListener('load', displayWindowSize);
 
 // //listen to window resizing function
-// window.addEventListener("resize", displayWindowSize);
+window.addEventListener("resize", displayWindowSize);
