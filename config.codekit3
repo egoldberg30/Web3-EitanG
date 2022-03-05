@@ -122,7 +122,7 @@
       "oAP" : "\/deploy\/index.html",
       "oF" : 2
     },
-    "\/dev\/js\/burgerAnimation.js" : {
+    "\/dev\/js\/burgeranimation.js" : {
       "bF" : 4,
       "ft" : 64,
       "ma" : 0,
@@ -133,7 +133,7 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/dev\/js\/mobileMenu.js" : {
+    "\/dev\/js\/mobilemenu.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
